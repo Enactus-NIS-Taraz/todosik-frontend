@@ -1,7 +1,7 @@
 {
   "name": "todosik",
   "version": "1.0.0",
-  "description": "",
+  "description": "Application for managing todos of team",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch --open",
@@ -15,8 +15,8 @@
     "url": "git+https://github.com/rolling-scopes-school/webpack-boilerplate.git"
   },
   "keywords": [],
-  "author": "student",
-  "license": "ISC",
+  "author": "Enactus Dev Team",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/webpack-boilerplate/issues"
   },
