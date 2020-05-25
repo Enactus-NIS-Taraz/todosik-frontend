@@ -4,7 +4,7 @@ const container = document.getElementById('container');
 
 function addColumn() {
   const clone = column.cloneNode(true);
-  container.appendChild(clone);
+  container.insertBefore(clone, button);
 }
 
 button.onclick = addColumn;
