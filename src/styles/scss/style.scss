@@ -22,7 +22,7 @@ h1 {
 
 .container {
     margin-top: 10%;
-    width: 100%;
+    min-width: 500px;
     display: flex;
     justify-content: flex-start;
 }
