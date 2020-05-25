@@ -4,8 +4,8 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 import './styles/scss/style.scss';
+import './js/columnAdd';
 
-console.log('Hello');
 
 const num1 = 5;
 const num2 = 3;
