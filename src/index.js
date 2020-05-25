@@ -6,3 +6,12 @@ import '@fortawesome/fontawesome-free/js/brands';
 import './styles/scss/style.scss';
 
 console.log('Hello');
+
+const num1 = 5;
+const num2 = 3;
+
+function sum(qwerty, qwert) {
+  return qwerty + qwert;
+}
+
+console.log(sum(num1, num2));
