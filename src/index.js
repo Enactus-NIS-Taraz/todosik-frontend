@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 import './styles/scss/style.scss';
 import './styles/scss/button.scss';
+import './styles/scss/inputs.scss';
 import './js/columnAdd';
 
 
