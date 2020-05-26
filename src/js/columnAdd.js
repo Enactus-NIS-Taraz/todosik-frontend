@@ -2,11 +2,6 @@ const button = document.getElementById('button');
 
 const container = document.getElementById('container');
 
-// function addColumn() {
-//   const clone = column.cloneNode(true);
-//   container.insertBefore(clone, button);
-// }
-
 function addColumn() {
   const newColumn = document.createElement('div');
   newColumn.className = 'column';
@@ -43,12 +38,12 @@ function addColumn() {
 
   addButton.appendChild(addIcon);
 
+  const trashButton = document.createElement('button');
+  trashButton.className = 'btn';
+
   function removeColumn() {
     newColumn.parentNode.removeChild(newColumn);
   }
-
-  const trashButton = document.createElement('button');
-  trashButton.className = 'btn';
   trashButton.onclick = removeColumn;
 
   columnButtons.appendChild(trashButton);

@@ -1,9 +1,13 @@
-const columns = document.querySelectorAll(".column");
+// const columns = document.querySelectorAll('.column');
 
-columns.forEach(function (column) {
-    const showInputsBtn = column.querySelector(".show-inputs-btn");
-    const input = column.querySelector(".inputs");
-    showInputsBtn.addEventListener('click', function () {
-        input.classList.toggle('show-inputs');
-    });
-});
+// function addCard(column) {
+//   const showInputsBtn = column.querySelector('.show-inputs-btn');
+//   const input = column.querySelector('.inputs');
+//   showInputsBtn.addEventListener('click', () => {
+//     input.classList.toggle('show-inputs');
+//   });
+// }
+
+// columns.forEach(addCard);
+
+const column = document.getElementById('column');
