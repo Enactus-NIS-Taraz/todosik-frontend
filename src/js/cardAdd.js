@@ -44,9 +44,11 @@ function addNewCard(column) {
   function cancelCardAdding() {
     newCard.parentNode.removeChild(newCard);
   }
+  const numberOfCards = column.querySelectorAll('.inputs').length;
   cancelButton.addEventListener('click', cancelCardAdding);
-
-  column.appendChild(newCard);
+  if (numberOfCards === 0) {
+    column.appendChild(newCard);
+  }
 }
 
 export { addNewCard };
