@@ -25,7 +25,10 @@ function addNewCard(column) {
   const inputTime = document.createElement('input');
   inputTime.className = 'inputs__item';
   inputTime.type = 'number';
-  inputTime.placeholder = 'Estimated lead time';
+  inputTime.placeholder = 'Write time in minuts';
+  inputTime.min = '0';
+  inputTime.max = '1000000';
+  inputTime.step = '5';
 
   newCard.appendChild(inputTime);
 
