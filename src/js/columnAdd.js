@@ -6,7 +6,6 @@ const button = document.getElementById('button');
 const container = document.getElementById('container');
 
 
-
 function addColumn() {
   const newColumn = document.createElement('div');
   newColumn.className = 'column';
