@@ -1,46 +1,3 @@
-
-// .inputs {
-//     display: none;
-//     width: 95%;
-//     margin: auto;
-//     margin-top: 8px;
-//     padding: 3px;
-// }
-
-// .inputs__item {
-//     width: 100%;
-//     height: 40px;
-
-//     padding: 6px;
-//     margin: auto;
-//     margin-top: 10px;
-//     margin-bottom: 10px;
-
-//     font-weight: 700;
-//     font-size: 16px;
-
-//     border-radius: 6px;
-// }
-
-// .inputs__button {
-//     margin-top: 20px;
-//     width: 49%;
-//     height: 40px;
-
-//     display: inline-block;
-
-//     font-size: 18px;
-//     font-weight: 700;
-//     color: #333;
-    
-//     // background-color: rgb(168, 248, 244);
-//     // border-radius: 5px;
-// }
-
-// .show-inputs {
-//     display: block;
-// }
-
 .inputs {
     width: 95%;
     margin: auto;
@@ -63,7 +20,6 @@
     padding: 3px;
     margin: auto;
     margin-top: 15px;
- 
 
     font-weight: 700;
     font-size: 16px;
@@ -90,5 +46,5 @@
 }
 
 .input__button_add {
-    margin-right: 5px;
+    margin-right: 2%;
 }
