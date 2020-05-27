@@ -2,10 +2,31 @@ import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
 
 const button = document.getElementById('button');
-
+const modal = document.querySelector('.modal-bg');
+const modalInput = document.querySelector('.modal__input');
+const modalExitBtn = document.querySelector('.modal__exit');
 const container = document.getElementById('container');
+const modalCreateBtn = document.querySelector('.modal__button');
 
-function addColumn() {
+function showModal() {
+  modal.style.display = "flex";
+}
+
+function hideModal() {
+  modal.style.display = "none";
+}
+
+function submitInputValue() {
+  const inputValue = modalInput.value;
+  addColumn(inputValue);
+  modalInput.value = "";
+  hideModal();
+}
+
+modalExitBtn.addEventListener('click', hideModal);
+modalCreateBtn.addEventListener('click', submitInputValue)
+
+function addColumn(inputValue) {
   const newColumn = document.createElement('div');
   newColumn.className = 'column';
 
@@ -16,7 +37,7 @@ function addColumn() {
 
   const columnTitle = document.createElement('div');
   columnTitle.className = 'column__title';
-  columnTitle.innerHTML = 'To do';
+  columnTitle.innerHTML = inputValue;
 
   columnHeader.appendChild(columnTitle);
 
@@ -61,4 +82,4 @@ function addColumn() {
     addNewCard(newColumn);
   });
 }
-button.onclick = addColumn;
+button.onclick = showModal;
