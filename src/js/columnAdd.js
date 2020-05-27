@@ -1,10 +1,9 @@
 import { addNewCard } from './cardAdd';
-import {removeColumn} from './removeColumn'
+import { removeColumn } from './removeColumn';
 
 const button = document.getElementById('button');
 
 const container = document.getElementById('container');
-
 
 function addColumn() {
   const newColumn = document.createElement('div');

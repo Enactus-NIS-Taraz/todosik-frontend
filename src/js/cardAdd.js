@@ -50,8 +50,10 @@ function addNewCard(column) {
         column.appendChild(newCard);
     }
     else if( numberOfCards === 1) {
-        column.removeChild(newCard);
+        const deleteInput = column.querySelector('.inputs');
+        deleteInput.remove();
     }
   }
 
-export {addNewCard};
+
+export { addNewCard };
