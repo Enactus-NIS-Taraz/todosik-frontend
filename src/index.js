@@ -7,7 +7,7 @@ import './styles/scss/style.scss';
 import './styles/scss/button.scss';
 import './styles/scss/inputs.scss';
 import './js/columnAdd';
-import './js/cardAdd';
+
 
 const num1 = 5;
 const num2 = 3;
