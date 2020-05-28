@@ -1,8 +1,7 @@
-let numberOfCards = 0;
-
 function showCardsNumber (column) {
     let listOfCards = column.querySelectorAll('.card');
-    numberOfCards = listOfCards.length;
+    const numberOfCardsElement = column.querySelector('.column__number');
+    numberOfCardsElement.innerText = listOfCards.length;
 }
 
-export {showCardsNumber, numberOfCards};
+export {showCardsNumber};

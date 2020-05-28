@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
-import { numberOfCards } from './showCardsNumber';
 
 // Creating variables
 const button = document.getElementById('button');
@@ -31,6 +30,11 @@ function addColumn(inputValue) {
   const columnTitle = document.createElement('div');
   columnTitle.className = 'column__title';
   columnTitle.innerHTML = inputValue;
+  columnTitle.addEventListener('dblclick', () => {
+    columnTitle.style.position = 'relative'
+    const editInput = document.createElement('input');
+    editInput.className = '.edit-input';
+  });
 
   columnHeader.appendChild(columnTitle);
 
@@ -41,7 +45,7 @@ function addColumn(inputValue) {
 
   const columnNumber = document.createElement('div');
   columnNumber.className = 'column__number';
-  columnNumber.innerHTML = numberOfCards;
+  columnNumber.innerHTML = 0;
 
   columnTitle.prepend(columnNumber);
 
@@ -74,6 +78,10 @@ function addColumn(inputValue) {
   addButton.addEventListener('click', () => {
     addNewCard(newColumn);
   });
+}
+
+function editColumnTitle(e) {
+  
 }
 
 function submitInputValue() {
