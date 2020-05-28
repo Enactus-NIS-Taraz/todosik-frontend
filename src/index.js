@@ -7,6 +7,7 @@ import './styles/scss/style.scss';
 import './styles/scss/button.scss';
 import './styles/scss/inputs.scss';
 import './styles/scss/modal.scss';
+import './styles/scss/edit_column_title.scss';
 import './js/columnAdd';
 
 

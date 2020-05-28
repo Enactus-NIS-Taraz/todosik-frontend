@@ -26,17 +26,17 @@ function addColumn(inputValue) {
   columnHeader.className = 'column__header';
 
   newColumn.appendChild(columnHeader);
-
+  
   const columnTitle = document.createElement('div');
   columnTitle.className = 'column__title';
-  columnTitle.innerHTML = inputValue;
-  columnTitle.addEventListener('dblclick', () => {
-    columnTitle.style.position = 'relative';
-    const editInput = document.createElement('input');
-    editInput.className = '.edit-input';
-  });
 
   columnHeader.appendChild(columnTitle);
+
+  const columnTitleContent = document.createElement('span');
+  columnTitleContent.className = 'column__title_content';
+  columnTitleContent.innerHTML = inputValue;
+
+  columnTitle.appendChild(columnTitleContent);
 
   const columnButtons = document.createElement('div');
   columnButtons.className = 'column__buttons';
@@ -77,6 +77,31 @@ function addColumn(inputValue) {
 
   addButton.addEventListener('click', () => {
     addNewCard(newColumn);
+  });
+
+  columnTitle.addEventListener('dblclick', () => {
+    console.log('bitch');
+    
+    columnTitle.style.display = 'none';
+    columnButtons.style.display = 'none';
+    const editInput = document.createElement('input');
+    editInput.className = 'edit-input';
+    editInput.value = columnTitleContent.innerText;
+    
+    const editBtn = document.createElement('button');
+    editBtn.className = 'edit-btn';
+    editBtn.innerHTML = 'Edit';
+
+    columnHeader.appendChild(editInput);
+    columnHeader.appendChild(editBtn);
+
+    editBtn.addEventListener('click', () => {
+      columnTitleContent.innerHTML = editInput.value;
+      columnTitle.style.display = 'block';
+      columnButtons.style.display = 'block';
+      editInput.style.display = 'none';
+      editBtn.style.display = 'none';
+    })
   });
 }
 

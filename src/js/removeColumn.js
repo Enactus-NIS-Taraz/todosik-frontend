@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 function removeColumn(column) {
   column.parentNode.removeChild(column);
 }

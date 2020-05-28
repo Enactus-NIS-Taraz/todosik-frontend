@@ -1,0 +1,28 @@
+.edit-input {
+    height: 25px;
+    width: 67%;
+    margin-left: 3%;
+    padding-left: 3px;
+
+
+    border-radius: 3px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(14,77,27,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(14,77,27,1);
+    box-shadow: 0px 0px 5px 0px rgba(14,77,27,1);
+
+    font-weight: 700;
+    color: #333;
+    font-size: 15px;
+}
+
+.edit-btn {
+    width: 24%;
+    margin-right: 3%;
+    height: 25px;
+
+    border: none;
+    border: rgb(132, 132, 255) 1px solid;
+    border-radius: 3px;
+    background-color: rgb(177, 177, 230);
+}

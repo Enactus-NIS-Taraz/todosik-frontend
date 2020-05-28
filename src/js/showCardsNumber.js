@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 function showCardsNumber(column) {
   const listOfCards = column.querySelectorAll('.card');
   const numberOfCardsElement = column.querySelector('.column__number');

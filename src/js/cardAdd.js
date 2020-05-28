@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { showCardsNumber } from './showCardsNumber';
 
 function deleteThisCard(someCard, column) {
@@ -61,6 +62,8 @@ function addNewCard(column) {
   }
   const numberOfCards = column.querySelectorAll('.inputs').length;
   cancelButton.addEventListener('click', cancelCardAdding);
+
+  // toggle effect on inputs
   if (numberOfCards === 0) {
     column.insertBefore(newCard, column.children[1]);
   } else if (numberOfCards === 1) {
@@ -86,7 +89,7 @@ function addNewCard(column) {
 
     const cardDeleteButton = document.createElement('button');
     cardDeleteButton.className = 'card__delete-button';
-    cardDeleteButton.innerText = 'X';
+    cardDeleteButton.innerHTML = '<i class="fas fa-times"></i>';
 
     // do not forget to change 'X' to icon from fontawesome
 
