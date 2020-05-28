@@ -42,8 +42,10 @@ h1 {
 
 .column {
     width: 25%;
-    min-height: 60vh;
+    height: 60vh;
     margin: 0 0 0 30px;
+
+    // overflow: auto;
 
     border-radius: 10px;
     border: rgb(124, 124, 124) 2px solid;
