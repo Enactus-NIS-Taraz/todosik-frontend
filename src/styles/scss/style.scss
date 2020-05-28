@@ -113,6 +113,16 @@ h1 {
     font-weight: 700;
 }
 
-// Inputs
+.card__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
-
+.card__delete-button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+}
