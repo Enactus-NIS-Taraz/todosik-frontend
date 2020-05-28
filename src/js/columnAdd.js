@@ -108,9 +108,6 @@ function addColumn(inputValue) {
   });
 }
 
-// function editColumnTitle(e) {
-// }
-
 function submitInputValue(event) {
   event.preventDefault();
   const inputValue = modalInput.value;
