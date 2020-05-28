@@ -1,7 +1,11 @@
-import {showCardsNumber} from './showCardsNumber';
+import { showCardsNumber } from './showCardsNumber';
 
-function deleteThisCard(someCard) {
-  someCard.remove();
+function deleteThisCard(someCard, column) {
+  // someCard.remove();
+  someCard.parentNode.removeChild(someCard);
+  const listOfCards = column.querySelectorAll('.card');
+  const numberOfCardsElement = column.querySelector('.column__number');
+  numberOfCardsElement.innerText = listOfCards.length;
 }
 
 function addNewCard(column) {
@@ -89,7 +93,7 @@ function addNewCard(column) {
     // do not forget to change 'X' to icon from fontawesome
 
     cardDeleteButton.addEventListener('click', () => {
-      deleteThisCard(card);
+      deleteThisCard(card, column);
     });
 
     cardContainer.appendChild(cardDeleteButton);
@@ -116,4 +120,5 @@ function addNewCard(column) {
   });
 }
 
+// eslint-disable-next-line import/prefer-default-export
 export { addNewCard };

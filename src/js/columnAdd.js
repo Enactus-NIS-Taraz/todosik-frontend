@@ -31,7 +31,7 @@ function addColumn(inputValue) {
   columnTitle.className = 'column__title';
   columnTitle.innerHTML = inputValue;
   columnTitle.addEventListener('dblclick', () => {
-    columnTitle.style.position = 'relative'
+    columnTitle.style.position = 'relative';
     const editInput = document.createElement('input');
     editInput.className = '.edit-input';
   });
@@ -80,9 +80,8 @@ function addColumn(inputValue) {
   });
 }
 
-function editColumnTitle(e) {
-  
-}
+// function editColumnTitle(e) {
+// }
 
 function submitInputValue() {
   const inputValue = modalInput.value;

@@ -1,7 +1,8 @@
-function showCardsNumber (column) {
-    let listOfCards = column.querySelectorAll('.card');
-    const numberOfCardsElement = column.querySelector('.column__number');
-    numberOfCardsElement.innerText = listOfCards.length;
+function showCardsNumber(column) {
+  const listOfCards = column.querySelectorAll('.card');
+  const numberOfCardsElement = column.querySelector('.column__number');
+  numberOfCardsElement.innerText = listOfCards.length;
 }
 
-export {showCardsNumber};
+// eslint-disable-next-line import/prefer-default-export
+export { showCardsNumber };
