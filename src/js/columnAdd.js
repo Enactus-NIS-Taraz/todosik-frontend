@@ -9,22 +9,12 @@ const container = document.getElementById('container');
 const modalCreateBtn = document.querySelector('.modal__button');
 
 function showModal() {
-  modal.style.display = "flex";
+  modal.style.display = 'flex';
 }
 
 function hideModal() {
-  modal.style.display = "none";
+  modal.style.display = 'none';
 }
-
-function submitInputValue() {
-  const inputValue = modalInput.value;
-  addColumn(inputValue);
-  modalInput.value = "";
-  hideModal();
-}
-
-modalExitBtn.addEventListener('click', hideModal);
-modalCreateBtn.addEventListener('click', submitInputValue)
 
 function addColumn(inputValue) {
   const newColumn = document.createElement('div');
@@ -82,4 +72,15 @@ function addColumn(inputValue) {
     addNewCard(newColumn);
   });
 }
+
+function submitInputValue() {
+  const inputValue = modalInput.value;
+  addColumn(inputValue);
+  modalInput.value = '';
+  hideModal();
+}
+
+modalExitBtn.addEventListener('click', hideModal);
+modalCreateBtn.addEventListener('click', submitInputValue);
+
 button.onclick = showModal;
