@@ -47,5 +47,4 @@ function dragAndDrop () {
     })
 }
 
-
 export {dragAndDrop};
