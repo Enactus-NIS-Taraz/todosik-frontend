@@ -3,9 +3,7 @@ import { showCardsNumber } from './showCardsNumber';
 function deleteThisCard(someCard, column) {
   // someCard.remove();
   someCard.parentNode.removeChild(someCard);
-  const listOfCards = column.querySelectorAll('.card');
-  const numberOfCardsElement = column.querySelector('.column__number');
-  numberOfCardsElement.innerText = listOfCards.length;
+  showCardsNumber(column);
 }
 
 function addNewCard(column) {
