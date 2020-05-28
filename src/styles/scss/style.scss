@@ -35,10 +35,11 @@ h1 {
 
 .container {
     margin-top: 60px;
-    width: 95%;
+    width: 95vw;
 
-    overflow-x: scroll; 
-    overflow-y:hidden; 
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
     margin-right: auto;
     margin-left: auto;
@@ -50,7 +51,10 @@ h1 {
 .column {
     width: 350px;
     height: 60vh;
-    margin: 0 0 0 30px;
+    margin: 0 0 15px 30px;
+
+    // display: inline-block;
+    flex: 0 0 auto;
 
     border-radius: 10px;
     border: rgb(124, 124, 124) 2px solid;
