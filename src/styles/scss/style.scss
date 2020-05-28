@@ -132,3 +132,11 @@ h1 {
 .card__delete-button:hover {
     opacity: 1;
 }
+
+.hide-card {
+    display: none;
+}
+
+.hovered-card {
+    background-color: #ccc;
+}

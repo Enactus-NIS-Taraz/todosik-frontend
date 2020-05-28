@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import { showCardsNumber } from './showCardsNumber';
+import { dragAndDrop } from './dragndrop';
 
 function deleteThisCard(someCard, column) {
   // someCard.remove();
@@ -74,7 +75,8 @@ function addNewCard(column) {
   newCard.addEventListener('submit', (event) => {
     event.preventDefault();
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card js-card';
+    card.setAttribute('draggable', true);
 
     const cardContainer = document.createElement('div');
     cardContainer.className = 'card__container';
@@ -118,6 +120,8 @@ function addNewCard(column) {
     deleteCard.remove();
 
     showCardsNumber(column);
+
+    dragAndDrop();
   });
 }
 
