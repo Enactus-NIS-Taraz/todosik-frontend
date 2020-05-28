@@ -55,7 +55,7 @@ function addNewCard(column) {
   const numberOfCards = column.querySelectorAll('.inputs').length;
   cancelButton.addEventListener('click', cancelCardAdding);
   if (numberOfCards === 0) {
-    column.appendChild(newCard);
+    column.prepend(newCard);
   }
   else if (numberOfCards === 1) {
     const deleteCard = column.querySelector('.inputs');
