@@ -95,3 +95,9 @@ modalExitBtn.addEventListener('click', hideModal);
 modalCreateBtn.addEventListener('click', submitInputValue);
 
 button.onclick = showModal;
+
+addColumn('To do');
+
+addColumn('In progress');
+
+addColumn('Done');
