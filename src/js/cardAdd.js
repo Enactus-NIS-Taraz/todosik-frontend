@@ -1,5 +1,8 @@
-/* eslint-disable linebreak-style */
-import { showCardsNumber } from './showCardsNumber'
+import {showCardsNumber} from './showCardsNumber';
+
+function deleteThisCard(someCard) {
+  someCard.remove();
+}
 
 function addNewCard(column) {
   const newCard = document.createElement('form');
@@ -68,10 +71,28 @@ function addNewCard(column) {
     const card = document.createElement('div');
     card.className = 'card';
 
+    const cardContainer = document.createElement('div');
+    cardContainer.className = 'card__container';
+
+    card.appendChild(cardContainer);
+
     const cardTitle = document.createElement('div');
     cardTitle.className = 'card__title';
+    cardTitle.style.width = '90%';
 
-    card.appendChild(cardTitle);
+    cardContainer.appendChild(cardTitle);
+
+    const cardDeleteButton = document.createElement('button');
+    cardDeleteButton.className = 'card__delete-button';
+    cardDeleteButton.innerText = 'X';
+
+    // do not forget to change 'X' to icon from fontawesome
+
+    cardDeleteButton.addEventListener('click', () => {
+      deleteThisCard(card);
+    });
+
+    cardContainer.appendChild(cardDeleteButton);
 
     const cardDesc = document.createElement('div');
     cardDesc.className = 'card__desc';
