@@ -44,20 +44,14 @@ function addNewCard(column) {
 
   newCard.appendChild(cancelButton);
 
-  // Create Card markup
-
-
-  
-
   function cancelCardAdding() {
     newCard.parentNode.removeChild(newCard);
   }
   const numberOfCards = column.querySelectorAll('.inputs').length;
   cancelButton.addEventListener('click', cancelCardAdding);
   if (numberOfCards === 0) {
-    column.prepend(newCard);
-  }
-  else if (numberOfCards === 1) {
+    column.insertBefore(newCard, column.children[1]);
+  } else if (numberOfCards === 1) {
     const deleteCard = column.querySelector('.inputs');
     deleteCard.remove();
   }
@@ -78,13 +72,12 @@ function addNewCard(column) {
 
     const cardTime = document.createElement('div');
     cardTime.className = 'card__time';
-    
+
     card.appendChild(cardTime);
 
     cardTitle.innerText = inputTitle.value;
     cardDesc.innerText = inputDescription.value;
     cardTime.innerText = inputTime.value;
-    
 
     column.appendChild(card);
 
