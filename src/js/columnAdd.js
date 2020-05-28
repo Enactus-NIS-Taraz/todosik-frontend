@@ -5,10 +5,10 @@ import { removeColumn } from './removeColumn';
 // Creating variables
 const button = document.getElementById('button');
 const modal = document.querySelector('.modal-bg');
+const modalForm = document.querySelector('.modal');
 const modalInput = document.querySelector('.modal__input');
 const modalExitBtn = document.querySelector('.modal__exit');
 const container = document.getElementById('container');
-const modalCreateBtn = document.querySelector('.modal__button');
 
 function showModal() {
   modal.style.display = 'flex';
@@ -26,7 +26,7 @@ function addColumn(inputValue) {
   columnHeader.className = 'column__header';
 
   newColumn.appendChild(columnHeader);
-  
+
   const columnTitle = document.createElement('div');
   columnTitle.className = 'column__title';
 
@@ -80,14 +80,12 @@ function addColumn(inputValue) {
   });
 
   columnTitle.addEventListener('dblclick', () => {
-    console.log('bitch');
-    
     columnTitle.style.display = 'none';
     columnButtons.style.display = 'none';
     const editInput = document.createElement('input');
     editInput.className = 'edit-input';
     editInput.value = columnTitleContent.innerText;
-    
+
     const editBtn = document.createElement('button');
     editBtn.className = 'edit-btn';
     editBtn.innerHTML = 'Edit';
@@ -101,14 +99,15 @@ function addColumn(inputValue) {
       columnButtons.style.display = 'block';
       editInput.style.display = 'none';
       editBtn.style.display = 'none';
-    })
+    });
   });
 }
 
 // function editColumnTitle(e) {
 // }
 
-function submitInputValue() {
+function submitInputValue(event) {
+  event.preventDefault();
   const inputValue = modalInput.value;
   addColumn(inputValue);
   modalInput.value = '';
@@ -117,7 +116,7 @@ function submitInputValue() {
 
 // Calling modal window functions
 modalExitBtn.addEventListener('click', hideModal);
-modalCreateBtn.addEventListener('click', submitInputValue);
+modalForm.addEventListener('submit', submitInputValue);
 
 button.onclick = showModal;
 
