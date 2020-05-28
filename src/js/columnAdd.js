@@ -1,6 +1,8 @@
+/* eslint-disable linebreak-style */
 import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
 
+// Creating variables
 const button = document.getElementById('button');
 const modal = document.querySelector('.modal-bg');
 const modalInput = document.querySelector('.modal__input');
@@ -80,6 +82,7 @@ function submitInputValue() {
   hideModal();
 }
 
+// Calling modal window functions
 modalExitBtn.addEventListener('click', hideModal);
 modalCreateBtn.addEventListener('click', submitInputValue);
 
