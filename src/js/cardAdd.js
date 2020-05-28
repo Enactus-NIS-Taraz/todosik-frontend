@@ -2,7 +2,7 @@
 import { showCardsNumber } from './showCardsNumber'
 
 function addNewCard(column) {
-  const newCard = document.createElement('div');
+  const newCard = document.createElement('form');
   newCard.className = 'inputs';
 
   const cardHeader = document.createElement('h2');
@@ -12,6 +12,7 @@ function addNewCard(column) {
   newCard.appendChild(cardHeader);
 
   const inputTitle = document.createElement('input');
+  inputTitle.required = true;
   inputTitle.className = 'inputs__item';
   inputTitle.type = 'text';
   inputTitle.placeholder = 'Title...';
@@ -19,6 +20,7 @@ function addNewCard(column) {
   newCard.appendChild(inputTitle);
 
   const inputDescription = document.createElement('input');
+  inputDescription.required = true;
   inputDescription.className = 'inputs__item';
   inputDescription.type = 'text';
   inputDescription.placeholder = 'Description...';
@@ -26,6 +28,7 @@ function addNewCard(column) {
   newCard.appendChild(inputDescription);
 
   const inputTime = document.createElement('input');
+  inputTime.required = true;
   inputTime.className = 'inputs__item';
   inputTime.type = 'number';
   inputTime.placeholder = 'Write time in minuts';
@@ -36,6 +39,7 @@ function addNewCard(column) {
   newCard.appendChild(inputTime);
 
   const addNewCardButton = document.createElement('button');
+  addNewCardButton.type = 'submit';
   addNewCardButton.className = 'inputs__button input__button_add';
   addNewCardButton.innerText = 'Add';
 
@@ -59,7 +63,8 @@ function addNewCard(column) {
     deleteCard.remove();
   }
 
-  addNewCardButton.addEventListener('click', () => {
+  newCard.addEventListener('submit', (event) => {
+    event.preventDefault();
     const card = document.createElement('div');
     card.className = 'card';
 
@@ -83,7 +88,7 @@ function addNewCard(column) {
 
     column.appendChild(card);
 
-    const deleteCard = column.querySelector('.inputs');
+    const deleteCard = document.querySelector('.inputs');
     deleteCard.remove();
 
     showCardsNumber(column);
