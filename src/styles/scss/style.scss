@@ -35,22 +35,29 @@ h1 {
 
 .container {
     margin-top: 60px;
-    min-width: 500px;
+    width: 95%;
+
+    overflow-x: scroll; 
+    overflow-y:hidden; 
+
+    margin-right: auto;
+    margin-left: auto;
+    
     display: flex;
     justify-content: flex-start;
 }
 
 .column {
-    width: 25%;
+    width: 350px;
     height: 60vh;
     margin: 0 0 0 30px;
 
-    // overflow: auto;
-
     border-radius: 10px;
     border: rgb(124, 124, 124) 2px solid;
+}
 
-    overflow: hidden;
+.column:first-child {
+    margin: 0;
 }
 
 .column__header {
@@ -58,11 +65,17 @@ h1 {
     font-size: 20px;
     width: 100%;
     border-bottom: 1px solid #ccc;
-    height: 40px;
+    height: 5vh;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.column__card-container {
+    overflow: scroll;
+
+    height: 54vh;
 }
 
 .column__number {

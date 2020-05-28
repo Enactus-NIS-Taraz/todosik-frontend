@@ -27,6 +27,11 @@ function addColumn(inputValue) {
 
   newColumn.appendChild(columnHeader);
 
+  const cardContainer = document.createElement('div');
+  cardContainer.className = 'column__card-container';
+
+  newColumn.appendChild(cardContainer);
+
   const columnTitle = document.createElement('div');
   columnTitle.className = 'column__title';
 
@@ -76,7 +81,7 @@ function addColumn(inputValue) {
   container.insertBefore(newColumn, button);
 
   addButton.addEventListener('click', () => {
-    addNewCard(newColumn);
+    addNewCard(cardContainer);
   });
 
   columnTitle.addEventListener('dblclick', () => {

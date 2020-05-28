@@ -2,7 +2,6 @@
 import { showCardsNumber } from './showCardsNumber';
 
 function deleteThisCard(someCard, column) {
-  // someCard.remove();
   someCard.parentNode.removeChild(someCard);
   showCardsNumber(column);
 }
@@ -65,7 +64,7 @@ function addNewCard(column) {
 
   // toggle effect on inputs
   if (numberOfCards === 0) {
-    column.insertBefore(newCard, column.children[1]);
+    column.insertBefore(newCard, column.children[0]);
   } else if (numberOfCards === 1) {
     const deleteCard = column.querySelector('.inputs');
     deleteCard.remove();
