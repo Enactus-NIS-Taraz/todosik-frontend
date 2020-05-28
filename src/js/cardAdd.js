@@ -44,6 +44,11 @@ function addNewCard(column) {
 
   newCard.appendChild(cancelButton);
 
+  // Create Card markup
+
+
+  
+
   function cancelCardAdding() {
     newCard.parentNode.removeChild(newCard);
   }
@@ -51,11 +56,41 @@ function addNewCard(column) {
   cancelButton.addEventListener('click', cancelCardAdding);
   if (numberOfCards === 0) {
     column.appendChild(newCard);
-}
-else if (numberOfCards === 1) {
+  }
+  else if (numberOfCards === 1) {
     const deleteCard = column.querySelector('.inputs');
     deleteCard.remove();
-}
+  }
+
+  addNewCardButton.addEventListener('click', () => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const cardTitle = document.createElement('div');
+    cardTitle.className = 'card__title';
+
+    card.appendChild(cardTitle);
+
+    const cardDesc = document.createElement('div');
+    cardDesc.className = 'card__desc';
+
+    card.appendChild(cardDesc);
+
+    const cardTime = document.createElement('div');
+    cardTime.className = 'card__time';
+    
+    card.appendChild(cardTime);
+
+    cardTitle.innerText = inputTitle.value;
+    cardDesc.innerText = inputDescription.value;
+    cardTime.innerText = inputTime.value;
+    
+
+    column.appendChild(card);
+
+    const deleteCard = column.querySelector('.inputs');
+    deleteCard.remove();
+  });
 }
 
 export { addNewCard };
