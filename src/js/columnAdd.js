@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
+import { numberOfCards } from './showCardsNumber';
 
 // Creating variables
 const button = document.getElementById('button');
@@ -40,7 +41,7 @@ function addColumn(inputValue) {
 
   const columnNumber = document.createElement('div');
   columnNumber.className = 'column__number';
-  columnNumber.innerHTML = 1;
+  columnNumber.innerHTML = numberOfCards;
 
   columnTitle.prepend(columnNumber);
 

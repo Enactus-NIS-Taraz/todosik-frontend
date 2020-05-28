@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+import { showCardsNumber } from './showCardsNumber'
+
 function addNewCard(column) {
   const newCard = document.createElement('div');
   newCard.className = 'inputs';
@@ -51,9 +53,8 @@ function addNewCard(column) {
   const numberOfCards = column.querySelectorAll('.inputs').length;
   cancelButton.addEventListener('click', cancelCardAdding);
   if (numberOfCards === 0) {
-    column.appendChild(newCard);
-  }
-  else if (numberOfCards === 1) {
+    column.insertBefore(newCard, column.children[1]);
+  } else if (numberOfCards === 1) {
     const deleteCard = column.querySelector('.inputs');
     deleteCard.remove();
   }
@@ -79,12 +80,13 @@ function addNewCard(column) {
     cardTitle.innerText = inputTitle.value;
     cardDesc.innerText = inputDescription.value;
     cardTime.innerText = inputTime.value;
-    
 
     column.appendChild(card);
 
     const deleteCard = column.querySelector('.inputs');
     deleteCard.remove();
+
+    showCardsNumber(column);
   });
 }
 
