@@ -1,6 +1,10 @@
 function showTitleEditInput(columnTitle, columnButtons, columnHeader, columnTitleContent) {
-  columnTitle.style.display = 'none';
-  columnButtons.style.display = 'none';
+  const titleOfColumn = columnTitle;
+  const buttonsOfColumn = columnButtons;
+  const titleContentOfColumn = columnTitleContent;
+
+  titleOfColumn.style.display = 'none';
+  buttonsOfColumn.style.display = 'none';
   const editInput = document.createElement('input');
   editInput.className = 'edit-input';
   editInput.value = columnTitleContent.innerText;
@@ -12,13 +16,14 @@ function showTitleEditInput(columnTitle, columnButtons, columnHeader, columnTitl
   columnHeader.appendChild(editInput);
   columnHeader.appendChild(editBtn);
 
-    editBtn.addEventListener('click', () => {
-    columnTitleContent.innerHTML = editInput.value;
-    columnTitle.style.display = 'block';
-    columnButtons.style.display = 'block';
+  editBtn.addEventListener('click', () => {
+    titleContentOfColumn.innerHTML = editInput.value;
+    titleOfColumn.style.display = 'block';
+    buttonsOfColumn.style.display = 'block';
     editInput.style.display = 'none';
     editBtn.style.display = 'none';
   });
 }
 
-export {showTitleEditInput};
+// eslint-disable-next-line import/prefer-default-export
+export { showTitleEditInput };

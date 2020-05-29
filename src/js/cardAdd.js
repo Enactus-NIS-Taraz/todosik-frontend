@@ -46,7 +46,7 @@ function addNewCard(column) {
 
   const addNewCardButton = document.createElement('button');
   addNewCardButton.type = 'submit';
-  addNewCardButton.className = 'inputs__button input__button_add';
+  addNewCardButton.className = 'inputs__button inputs__button_add';
   addNewCardButton.innerText = 'Add';
 
   newCard.appendChild(addNewCardButton);
