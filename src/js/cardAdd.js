@@ -7,78 +7,82 @@ function deleteThisCard(someCard, column) {
   showCardsNumber(column);
 }
 
+
+
+
 function addNewCard(column, newColumn) {
-  const newCard = document.createElement('form');
-  newCard.className = 'inputs';
+  const createCardForm = document.createElement('form');
+  createCardForm.className = 'inputs';
 
-  const cardHeader = document.createElement('h2');
-  cardHeader.className = 'inputs__header';
-  cardHeader.innerText = 'Create card';
+  const formHeader = document.createElement('h2');
+  formHeader.className = 'inputs__header';
+  formHeader.innerText = 'Create card';
 
-  newCard.appendChild(cardHeader);
+  createCardForm.appendChild(formHeader);
 
-  const inputTitle = document.createElement('input');
-  inputTitle.required = true;
-  inputTitle.className = 'inputs__item';
-  inputTitle.type = 'text';
-  inputTitle.placeholder = 'Title...';
+  const titleInput = document.createElement('input');
+  titleInput.required = true;
+  titleInput.className = 'inputs__item';
+  titleInput.type = 'text';
+  titleInput.placeholder = 'Title...';
 
-  newCard.appendChild(inputTitle);
+  createCardForm.appendChild(titleInput);
 
-  const inputDescription = document.createElement('input');
-  inputDescription.required = true;
-  inputDescription.className = 'inputs__item';
-  inputDescription.type = 'text';
-  inputDescription.placeholder = 'Description...';
+  const descriptionInput = document.createElement('input');
+  descriptionInput.required = true;
+  descriptionInput.className = 'inputs__item';
+  descriptionInput.type = 'text';
+  descriptionInput.placeholder = 'Description...';
 
-  newCard.appendChild(inputDescription);
+  createCardForm.appendChild(descriptionInput);
 
-  const inputTime = document.createElement('input');
-  inputTime.required = true;
-  inputTime.className = 'inputs__item';
-  inputTime.type = 'number';
-  inputTime.placeholder = 'Write time in minuts';
-  inputTime.min = '0';
-  inputTime.max = '1000000';
-  inputTime.step = '5';
+  const timeInput = document.createElement('input');
+  timeInput.required = true;
+  timeInput.className = 'inputs__item';
+  timeInput.type = 'number';
+  timeInput.placeholder = 'Write time in minuts';
+  timeInput.min = '0';
+  timeInput.max = '1000000';
+  timeInput.step = '5';
 
-  newCard.appendChild(inputTime);
+  createCardForm.appendChild(timeInput);
 
   const addNewCardButton = document.createElement('button');
   addNewCardButton.type = 'submit';
   addNewCardButton.className = 'inputs__button inputs__button_add';
   addNewCardButton.innerText = 'Add';
 
-  newCard.appendChild(addNewCardButton);
+  createCardForm.appendChild(addNewCardButton);
 
   const cancelButton = document.createElement('button');
   cancelButton.className = 'inputs__button';
   cancelButton.innerText = 'Cancel';
 
-  newCard.appendChild(cancelButton);
+  createCardForm.appendChild(cancelButton);
 
   function cancelCardAdding() {
-    newCard.parentNode.removeChild(newCard);
+    createCardForm.parentNode.removeChild(createCardForm);
   }
+
   const numberOfCards = column.querySelectorAll('.inputs').length;
   cancelButton.addEventListener('click', cancelCardAdding);
 
   // toggle effect on inputs
   if (numberOfCards === 0) {
-    column.insertBefore(newCard, column.children[0]);
+    column.insertBefore(createCardForm, column.children[0]);
   } else if (numberOfCards === 1) {
     const deleteCard = column.querySelector('.inputs');
     deleteCard.remove();
   }
 
-  newCard.addEventListener('submit', (event) => {
+  createCardForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const card = document.createElement('div');
     card.className = 'card js-card';
     card.setAttribute('draggable', true);
 
     const cardContainer = document.createElement('div');
-    cardContainer.className = 'card__container';
+    cardContainer.className = 'card__title-container';
 
     card.appendChild(cardContainer);
 
@@ -107,9 +111,9 @@ function addNewCard(column, newColumn) {
     cardTime.className = 'card__time';
     card.appendChild(cardTime);
 
-    cardTitle.innerText = inputTitle.value;
-    cardDesc.innerText = inputDescription.value;
-    cardTime.innerText = inputTime.value;
+    cardTitle.innerText = titleInput.value;
+    cardDesc.innerText = descriptionInput.value;
+    cardTime.innerText = timeInput.value;
 
     column.appendChild(card);
 
@@ -121,6 +125,7 @@ function addNewCard(column, newColumn) {
     dragAndDrop();
   });
 }
+
 
 // eslint-disable-next-line import/prefer-default-export
 export { addNewCard };

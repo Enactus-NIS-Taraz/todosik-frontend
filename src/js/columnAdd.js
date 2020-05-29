@@ -47,33 +47,33 @@ function addColumn(inputValue) {
 
   columnTitle.prepend(columnNumber);
 
-  const addButton = document.createElement('button');
-  addButton.className = 'btn show-inputs-btn';
+  const addCardButton = document.createElement('button');
+  addCardButton.className = 'btn show-inputs-btn';
 
-  columnButtons.appendChild(addButton);
+  columnButtons.appendChild(addCardButton);
 
   const addIcon = document.createElement('i');
   addIcon.className = 'fas fa-plus';
 
-  addButton.appendChild(addIcon);
+  addCardButton.appendChild(addIcon);
 
-  const trashButton = document.createElement('button');
-  trashButton.className = 'btn';
+  const deleteColumnButton = document.createElement('button');
+  deleteColumnButton.className = 'btn';
 
-  columnButtons.appendChild(trashButton);
+  columnButtons.appendChild(deleteColumnButton);
 
-  trashButton.addEventListener('click', () => {
+  deleteColumnButton.addEventListener('click', () => {
     removeColumn(newColumn);
   });
 
   const trashIcon = document.createElement('i');
   trashIcon.className = 'fas fa-trash-alt';
 
-  trashButton.appendChild(trashIcon);
+  deleteColumnButton.appendChild(trashIcon);
 
   container.insertBefore(newColumn, createColumnButton);
 
-  addButton.addEventListener('click', () => {
+  addCardButton.addEventListener('click', () => {
     addNewCard(cardContainer, newColumn);
   });
 

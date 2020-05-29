@@ -1,6 +1,4 @@
 function showCardsNumber(column) {
-  console.log(column);
-  
   const listOfCards = column.querySelectorAll('.card');
   const numberOfCardsElement = column.querySelector('.column__number');
   numberOfCardsElement.innerText = listOfCards.length;
