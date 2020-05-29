@@ -1,4 +1,5 @@
-.edit-input {
+.edit {
+    &-input {
     height: 25px;
     width: 67%;
     margin-left: 3%;
@@ -14,15 +15,18 @@
     font-weight: 700;
     color: #333;
     font-size: 15px;
-}
+    }
 
-.edit-btn {
-    width: 24%;
-    margin-right: 3%;
-    height: 25px;
-
-    border: none;
-    border: rgb(132, 132, 255) 1px solid;
-    border-radius: 3px;
-    background-color: rgb(177, 177, 230);
+    &-btn {
+        width: 24%;
+        margin-right: 3%;
+        height: 25px;
+    
+        border: none;
+        color: white;
+        font-weight: 700;
+        border: rgb(103, 103, 255) 1px solid;
+        border-radius: 3px;
+        background-color: rgb(144, 144, 228);
+    }
 }
