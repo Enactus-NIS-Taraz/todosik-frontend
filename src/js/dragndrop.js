@@ -1,13 +1,18 @@
 /* eslint-disable linebreak-style */
 function dragAndDrop () {
-  const card = document.querySelector('.card');
+  const cards = document.querySelectorAll('.card');
   const cardContainers = document.querySelectorAll('.column__card-container');
+  let draggingCard = null;
 
-
+  cards.forEach(card => {
     card.addEventListener('dragstart', dragStart);
     card.addEventListener('dragend', dragEnd);
+  });
 
   function dragStart () {
+    draggingCard = this;
+    console.log('dragstart');
+    
     setTimeout(() => {
       this.classList.add('hide-card');
     }, 0)
@@ -31,9 +36,13 @@ function dragAndDrop () {
   }
 
   function dragDrop () {
-    this.appendChild(card);
-    console.log(card);
-    this.classList.remove('hovered-card');
+    if(draggingCard) {
+      this.appendChild(draggingCard);
+      console.log('drop');
+      this.classList.remove('hovered-card');
+      draggingCard = null;
+      
+    }
   }
 
   cardContainers.forEach((container) => {
