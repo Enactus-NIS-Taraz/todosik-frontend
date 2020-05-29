@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
-import { showTitleEditInput } from './columnTitleEdit'
+import { showTitleEditInput } from './columnTitleEdit';
 
 // Creating variables
 const button = document.getElementById('button');
@@ -10,14 +10,6 @@ const modalForm = document.querySelector('.modal');
 const modalInput = document.querySelector('.modal__input');
 const modalExitBtn = document.querySelector('.modal__exit');
 const container = document.getElementById('container');
-
-function showModal() {
-  modal.style.display = 'flex';
-}
-
-function hideModal() {
-  modal.style.display = 'none';
-}
 
 function addColumn(inputValue) {
   const newColumn = document.createElement('div');
@@ -85,11 +77,18 @@ function addColumn(inputValue) {
     addNewCard(cardContainer);
   });
 
-  columnTitle.addEventListener('dblclick', showTitleEditInput(columnTitle, columnButtons, columnHeader));
+  columnTitle.addEventListener('dblclick', () => {
+    showTitleEditInput(columnTitle, columnButtons, columnHeader, columnTitleContent);
+  });
 }
 
-// function editColumnTitle(e) {
-// }
+function showModal() {
+  modal.style.display = 'flex';
+}
+
+function hideModal() {
+  modal.style.display = 'none';
+}
 
 function submitInputValue(event) {
   event.preventDefault();

@@ -92,8 +92,6 @@ function addNewCard(column) {
     cardDeleteButton.className = 'card__delete-button';
     cardDeleteButton.innerHTML = '<i class="fas fa-times"></i>';
 
-    // do not forget to change 'X' to icon from fontawesome
-
     cardDeleteButton.addEventListener('click', () => {
       deleteThisCard(card, column);
     });
