@@ -4,7 +4,7 @@ import { removeColumn } from './removeColumn';
 import { showTitleEditInput } from './columnTitleEdit';
 
 // Creating variables
-const button = document.getElementById('button');
+const createColumnButton = document.querySelector('.column-add-button');
 const modal = document.querySelector('.modal-bg');
 const modalForm = document.querySelector('.modal');
 const modalInput = document.querySelector('.modal__input');
@@ -71,7 +71,7 @@ function addColumn(inputValue) {
 
   trashButton.appendChild(trashIcon);
 
-  container.insertBefore(newColumn, button);
+  container.insertBefore(newColumn, createColumnButton);
 
   addButton.addEventListener('click', () => {
     addNewCard(cardContainer, newColumn);
@@ -102,7 +102,7 @@ function submitInputValue(event) {
 modalExitBtn.addEventListener('click', hideModal);
 modalForm.addEventListener('submit', submitInputValue);
 
-button.onclick = showModal;
+createColumnButton.onclick = showModal;
 
 addColumn('To do');
 
