@@ -9,24 +9,17 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .page-title {
     margin-top: 55px;
     font-size: 30px;
     text-align: center;
     color: rgb(27, 79, 109);
-}
-
-.btn {
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
@@ -46,116 +39,4 @@ h1 {
     
     display: flex;
     justify-content: flex-start;
-}
-
-.column {
-    width: 350px;
-    height: 60vh;
-    margin: 0 0 15px 30px;
-
-    // display: inline-block;
-    flex: 0 0 auto;
-
-    border-radius: 10px;
-    border: rgb(124, 124, 124) 2px solid;
-}
-
-.column:first-child {
-    margin: 0;
-}
-
-.column__header {
-    font-weight: 700;
-    font-size: 20px;
-    width: 100%;
-    border-bottom: 1px solid #ccc;
-    height: 5vh;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.column__card-container {
-    overflow: scroll;
-
-    height: 54vh;
-}
-
-.column__number {
-    height: 20px;
-    width: 20px;
-    margin-left: 10px;
-    margin-right: 5px;
-
-    display: inline-block;
-    text-align: center;
-
-    font-size: 17px;
-    color: white;
-
-    border-radius: 50%;
-    background-color: #333;
-}
-
-.column__buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-}
-
-.card {
-    width: 95%;
-    margin: auto;
-    margin-top: 8px;
-    padding: 3px;
-
-    background-color: rgb(241, 239, 239);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    font-size: 15px;
-}
-
-.card__title {
-    margin: 5px 7px;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.card__desc {
-    margin: 5px 7px;
-}
-
-.card__time {
-    margin: 5px 7px;
-    font-weight: 700;
-}
-
-.card__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card__delete-button {
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: none;
-
-    opacity: 0.2;
-}
-
-.card__delete-button:hover {
-    opacity: 1;
-}
-
-.hide-card {
-    display: none;
-}
-
-.hovered-card {
-    background-color: #ccc;
 }

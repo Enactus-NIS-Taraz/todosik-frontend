@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
+import { showTitleEditInput } from './columnTitleEdit'
 
 // Creating variables
 const button = document.getElementById('button');
@@ -84,28 +85,7 @@ function addColumn(inputValue) {
     addNewCard(cardContainer);
   });
 
-  columnTitle.addEventListener('dblclick', () => {
-    columnTitle.style.display = 'none';
-    columnButtons.style.display = 'none';
-    const editInput = document.createElement('input');
-    editInput.className = 'edit-input';
-    editInput.value = columnTitleContent.innerText;
-
-    const editBtn = document.createElement('button');
-    editBtn.className = 'edit-btn';
-    editBtn.innerHTML = 'Edit';
-
-    columnHeader.appendChild(editInput);
-    columnHeader.appendChild(editBtn);
-
-    editBtn.addEventListener('click', () => {
-      columnTitleContent.innerHTML = editInput.value;
-      columnTitle.style.display = 'block';
-      columnButtons.style.display = 'block';
-      editInput.style.display = 'none';
-      editBtn.style.display = 'none';
-    });
-  });
+  columnTitle.addEventListener('dblclick', showTitleEditInput(columnTitle, columnButtons, columnHeader));
 }
 
 // function editColumnTitle(e) {
