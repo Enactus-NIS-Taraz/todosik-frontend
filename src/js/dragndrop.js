@@ -1,21 +1,22 @@
+import { showCardsNumber } from './showCardsNumber';
+
 /* eslint-disable linebreak-style */
 function dragAndDrop () {
   const cards = document.querySelectorAll('.card');
   const cardContainers = document.querySelectorAll('.column__card-container');
+  const columns = document.querySelectorAll('.column');
   let draggingCard = null;
 
-  cards.forEach(card => {
+  cards.forEach((card) => {
     card.addEventListener('dragstart', dragStart);
     card.addEventListener('dragend', dragEnd);
   });
 
   function dragStart () {
     draggingCard = this;
-    console.log('dragstart');
-    
     setTimeout(() => {
       this.classList.add('hide-card');
-    }, 0)
+    }, 0);
   };
 
   function dragEnd () {
@@ -38,10 +39,11 @@ function dragAndDrop () {
   function dragDrop () {
     if(draggingCard) {
       this.appendChild(draggingCard);
-      console.log('drop');
       this.classList.remove('hovered-card');
       draggingCard = null;
-      
+      columns.forEach((column) => {
+        showCardsNumber(column);
+      });
     }
   }
 
