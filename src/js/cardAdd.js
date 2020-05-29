@@ -7,7 +7,7 @@ function deleteThisCard(someCard, column) {
   showCardsNumber(column);
 }
 
-function addNewCard(column) {
+function addNewCard(column, newColumn) {
   const newCard = document.createElement('form');
   newCard.className = 'inputs';
 
@@ -93,7 +93,7 @@ function addNewCard(column) {
     cardDeleteButton.innerHTML = '<i class="fas fa-times"></i>';
 
     cardDeleteButton.addEventListener('click', () => {
-      deleteThisCard(card, column);
+      deleteThisCard(card, newColumn);
     });
 
     cardContainer.appendChild(cardDeleteButton);
@@ -116,7 +116,7 @@ function addNewCard(column) {
     const deleteCard = document.querySelector('.inputs');
     deleteCard.remove();
 
-    showCardsNumber(column);
+    showCardsNumber(newColumn);
 
     dragAndDrop();
   });

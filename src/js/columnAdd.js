@@ -74,7 +74,7 @@ function addColumn(inputValue) {
   container.insertBefore(newColumn, button);
 
   addButton.addEventListener('click', () => {
-    addNewCard(cardContainer);
+    addNewCard(cardContainer, newColumn);
   });
 
   columnTitle.addEventListener('dblclick', () => {

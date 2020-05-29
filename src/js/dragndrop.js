@@ -37,7 +37,6 @@ function dragAndDrop () {
     }
 
     columns.forEach((column) => {
-      console.log(column);
       column.addEventListener('dragover', dragOver);
       column.addEventListener('dragenter', dragEnter);
       column.addEventListener('dragleave', dragLeave);
