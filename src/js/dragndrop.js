@@ -2,7 +2,7 @@ function dragAndDrop () {
     const cards = document.querySelectorAll('.card');
 
     cards.forEach((card) => {
-        const columns = document.querySelectorAll('.column');
+        const columns = document.querySelectorAll('.column__card-container');
     
         function dragStart () {
             setTimeout(() => {
@@ -36,6 +36,7 @@ function dragAndDrop () {
         }
 
         columns.forEach((column) => {
+            console.log(column);
             column.addEventListener('dragover', dragOver);
             column.addEventListener('dragenter', dragEnter);
             column.addEventListener('dragleave', dragLeave);
