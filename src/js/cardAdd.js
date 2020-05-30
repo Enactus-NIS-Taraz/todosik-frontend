@@ -7,9 +7,6 @@ function deleteThisCard(someCard, column) {
   showCardsNumber(column);
 }
 
-
-
-
 function addNewCard(column, newColumn) {
   const createCardForm = document.createElement('form');
   createCardForm.className = 'inputs';
@@ -84,13 +81,20 @@ function addNewCard(column, newColumn) {
     const cardContainer = document.createElement('div');
     cardContainer.className = 'card__title-container';
 
+    const colorMark = document.createElement('div');
+    colorMark.classList.add('card-color')
+    card.appendChild(colorMark);
+
+    cardContainer.appendChild(colorMark);
+
+
     card.appendChild(cardContainer);
 
     const cardTitle = document.createElement('div');
     cardTitle.className = 'card__title';
     cardTitle.style.width = '90%';
 
-    cardContainer.appendChild(cardTitle);
+    card.appendChild(cardTitle);
 
     const cardDeleteButton = document.createElement('button');
     cardDeleteButton.className = 'card__delete-button';

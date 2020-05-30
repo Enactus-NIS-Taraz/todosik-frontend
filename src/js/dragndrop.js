@@ -29,17 +29,17 @@ function dragAndDrop () {
 
   function dragEnter (e) {
     e.preventDefault();
-    this.classList.add('hovered-card');
+    this.classList.add('hovered-column');
   };
 
   function dragLeave () {
-    this.classList.remove('hovered-card');
+    this.classList.remove('hovered-column');
   }
 
   function dragDrop () {
     if(draggingCard) {
       this.appendChild(draggingCard);
-      this.classList.remove('hovered-card');
+      this.classList.remove('hovered-column');
       draggingCard = null;
       columns.forEach((column) => {
         showCardsNumber(column);

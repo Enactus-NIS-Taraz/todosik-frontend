@@ -10,3 +10,4 @@ import './styles/scss/edit_column_title.scss';
 import './js/columnAdd';
 import './styles/scss/column.scss';
 import './styles/scss/card.scss';
+import './styles/scss/register-form.scss';
