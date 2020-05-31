@@ -10,6 +10,7 @@ const modalForm = document.querySelector('.modal');
 const modalInput = document.querySelector('.modal__input');
 const modalExitBtn = document.querySelector('.modal__exit');
 const container = document.getElementById('container');
+container.style.display('none');
 
 function addColumn(inputValue) {
   const newColumn = document.createElement('div');
