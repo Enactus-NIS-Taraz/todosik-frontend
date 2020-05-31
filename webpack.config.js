@@ -38,13 +38,7 @@ module.exports = {
     filename: 'index.html',
     template: 'src/index.html',
     chunks: ['main'],
-  }),
-  new HtmlWebpackPlugin({
-    filename: 'register.html',
-    template: 'src/register.html',
-    chunks: ['register'],
-  }),
-  ],
+  })],
   devServer: {
     contentBase: '/dist',
     port: 7700,
