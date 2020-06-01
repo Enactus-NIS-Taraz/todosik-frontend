@@ -87,7 +87,6 @@ function addNewCard(column, newColumn) {
 
     cardContainer.appendChild(colorMark);
 
-
     card.appendChild(cardContainer);
 
     const cardTitle = document.createElement('div');
