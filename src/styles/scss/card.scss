@@ -28,7 +28,7 @@
         font-weight: 700;
     }
 
-    &__title-container {
+    &__container {
         width: 95%;
         margin: auto;
         margin-top: 5px;
@@ -38,11 +38,25 @@
         align-items: center;
     }
 
+    &__edit-button {
+        width: 10px;
+        height: 10px;
+        border: none;
+        background: none;
+
+        opacity: 0.2;
+    }
+
+    &__edit-button:hover {
+        opacity: 1;
+    }
+
     &__delete-button {
         width: 10px;
         height: 10px;
         border: none;
         background: none;
+        margin-left: 10px;
     
         opacity: 0.2;
     }

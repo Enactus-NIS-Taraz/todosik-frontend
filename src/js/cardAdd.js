@@ -79,22 +79,26 @@ function addNewCard(column, newColumn) {
     card.setAttribute('draggable', true);
 
     const cardContainer = document.createElement('div');
-    cardContainer.className = 'card__title-container';
+    cardContainer.className = 'card__container';
+
+    card.appendChild(cardContainer);
 
     const colorMark = document.createElement('div');
-    colorMark.classList.add('card-color')
+    colorMark.classList.add('card-color');
     card.appendChild(colorMark);
 
     cardContainer.appendChild(colorMark);
 
+    const cardContainerButtons = document.createElement('div');
+    cardContainerButtons.className = 'card__container-buttons';
 
-    card.appendChild(cardContainer);
+    cardContainer.appendChild(cardContainerButtons);
 
-    const cardTitle = document.createElement('div');
-    cardTitle.className = 'card__title';
-    cardTitle.style.width = '90%';
+    const cardEditButton = document.createElement('button');
+    cardEditButton.className = 'card__edit-button';
+    cardEditButton.innerHTML = '<i class="far fa-edit"></i>';
 
-    card.appendChild(cardTitle);
+    cardContainerButtons.appendChild(cardEditButton);
 
     const cardDeleteButton = document.createElement('button');
     cardDeleteButton.className = 'card__delete-button';
@@ -104,7 +108,13 @@ function addNewCard(column, newColumn) {
       deleteThisCard(card, newColumn);
     });
 
-    cardContainer.appendChild(cardDeleteButton);
+    cardContainerButtons.appendChild(cardDeleteButton);
+
+    const cardTitle = document.createElement('div');
+    cardTitle.className = 'card__title';
+    cardTitle.style.width = '90%';
+
+    card.appendChild(cardTitle);
 
     const cardDesc = document.createElement('div');
     cardDesc.className = 'card__desc';
