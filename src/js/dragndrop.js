@@ -1,4 +1,5 @@
 import { showCardsNumber } from './showCardsNumber';
+import { showColumnColor } from './showColumnColor';
 
 /* eslint-disable linebreak-style */
 function dragAndDrop () {
@@ -44,6 +45,7 @@ function dragAndDrop () {
       columns.forEach((column) => {
         showCardsNumber(column);
       });
+      showColumnColor();
     }
   }
 

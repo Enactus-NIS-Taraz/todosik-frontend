@@ -2,6 +2,7 @@
 import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
 import { showTitleEditInput } from './columnTitleEdit';
+import { getRandomColor } from './getRandomColor';
 
 // Creating variables
 const createColumnButton = document.querySelector('.column-add-button');
@@ -19,6 +20,14 @@ function addColumn(inputValue) {
   columnHeader.className = 'column__header';
 
   newColumn.appendChild(columnHeader);
+
+  const colorSave = document.createElement('span');
+  colorSave.className = 'color-save';
+  colorSave.style.display = 'none';
+  const array = getRandomColor();
+  colorSave.innerText = `rgb(${array[0]}, ${array[1]}, ${array[2]})`;
+
+  newColumn.appendChild(colorSave);
 
   const cardContainer = document.createElement('div');
   cardContainer.className = 'column__card-container';
