@@ -7,72 +7,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <div class="register">
-        <h2 class="register__logo">Todosik</h2>
-        <div class="register__content">
-            <h3 class="register__heading">Create account and manage your tasks!</h3>
-            <form action="" class="register__form">
-                <input type="text" class="register__input" placeholder="Enter username">
-                <input type="text" class="register__input" placeholder="Enter email address">
-                <input type="password" class="register__input" placeholder="Enter password">
-                <input type="password" class="register__input" placeholder="Enter password again">
-            </form>
-        </div>
-    </div> -->
-
-    <!-- Register Form -->
-
-    <div class="register-container"  style="display: none;" id="register-container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-                </div>
+    <div class="account-page">
+        <h2 class="logo">Todosik</h2>
+        <div class="register account-page__content">
+            <div class="register">
+                <h3 class="account-page__heading">Create account and manage your tasks!</h3>
+                <form action="" class="form">
+                    <input type="text" class="form__input" placeholder="Username">
+                    <input type="text" class="form__input" placeholder="Email address">
+                    <input type="password" class="form__input" placeholder="Password">
+                    <input type="password" class="form__input" placeholder="Password again">
+                    <button type="submit" class="form__btn">Create</button>
+                </form>
+                
+            </div>
+            <div class="sign-in">
+                <h3 class="account-page__heading">Sign-in to account</h3>
+                <form action="" class="form">
+                    <input type="text" class="form__input" placeholder="Email address or username">
+                    <input type="password" class="form__input" placeholder="Password">
+                    <button type="submit" class="form__btn">Sign in</button>
+                </form>
             </div>
         </div>
-        </div>
+    </div> 
 
-    <h1 class="page-title">Scrum desk</h1>
+    <!-- Register Form -->
+    <!-- <div class="registration-body">
+        <div class="register-container" id="register-container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button>Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div> registration-body -->
+
+    <h1 class="page-title" style="display: none;">Scrum desk</h1>
         <!-- KanBan board -->
 
-    <div class="container" id="container">
+    <div class="container" id="container" style="display: none;">
     <button class="column-add-button">+</button>
     <div class="modal-bg">
         <form class="modal">
@@ -83,6 +96,16 @@
             <button type="submit" class="modal__button">Create</button>
         </form>
     </div>
+    <!-- <div class="modal-bg edit-modal">
+        <form class="modal">
+            <button class="modal__exit"><i class="fas fa-times"></i></button>
+            <h2 class="modal__header">Edit a card</h2>
+            <input type="text" class="modal__input edit-card-title" required>
+            <input type="text" class="modal__input edit-card-desc" required>
+            <input type="text" class="modal__input edit-card-time" required>
+            <button type="submit" class="modal__button">Create</button>
+        </form>
+    </div> -->
     </div>
 </body>
 </html>
