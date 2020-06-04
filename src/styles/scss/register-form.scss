@@ -1,14 +1,28 @@
 
 .account-page {
+    width: 30%;
+    min-width: 400px;
+    height: 60vh;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+
     &__content {
         margin-top: 30px;
         width: 100%;
+        height: 430px;
         padding: 0 30px 30px 30px;
         -webkit-box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
         -moz-box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
         box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
         border-radius: 3px;
         position: relative;
+        overflow: hidden;
+        transition: height 0.6s ease-in-out;
+    }
+
+    &__content-small {
+        height: 300px;
     }
 
     &__heading {
@@ -44,18 +58,23 @@
         text-transform: uppercase;
         transition: transform 80ms ease-in;
     }
+
     &__btn:active {
         transform: scale(0.95);
     }
-}
 
-.account-page {
-    width: 30%;
-    min-width: 400px;
-    height: 60vh;
-    margin: auto;
-    margin-top: 2%;
-    text-align: center;
+    &__link {
+        margin-top: 20px;
+        display: block;
+        font-size: 12px;
+        color: rgb(117, 117, 117);
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+        color: #333;
+    }
 }
 
 .logo {
@@ -64,9 +83,28 @@
     color: rgb(243, 193, 55);
 }
 
-.sign-in {
-    //transform: translateX(100%);
+.register {
+    width: 340px;
+    position: absolute;
+    left:30px;
+    transition: transform 0.6s ease-in-out;
 }
+
+.register-hide{
+    transform: translateX(-430px);
+}
+
+.sign-in {
+    width: 340px;
+    position: absolute;
+    left: 430px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.sign-in-show{
+    transform: translateX(-400px);
+}
+
 
 // .registration-body {
 //     width: 100%;
