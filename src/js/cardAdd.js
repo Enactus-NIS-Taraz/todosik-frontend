@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import { showCardsNumber } from './showCardsNumber';
 import { dragAndDrop } from './dragndrop';
+import { editThisCard } from './editCard';
 
 function deleteThisCard(someCard, column) {
   someCard.parentNode.removeChild(someCard);
@@ -123,11 +124,21 @@ function addNewCard(column, newColumn) {
 
     const cardTime = document.createElement('div');
     cardTime.className = 'card__time';
+
     card.appendChild(cardTime);
+
+    const cardRealTime = document.createElement('div');
+    cardRealTime.className = 'card__time';
+
+    card.appendChild(cardRealTime);
 
     cardTitle.innerText = titleInput.value;
     cardDesc.innerText = descriptionInput.value;
     cardTime.innerText = timeInput.value;
+
+    cardEditButton.addEventListener('click', () => {
+      editThisCard(cardTitle, cardDesc, cardTime, cardRealTime);
+    });
 
     column.appendChild(card);
 

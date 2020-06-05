@@ -12,3 +12,4 @@ import './js/registerForm';
 import './styles/scss/column.scss';
 import './styles/scss/card.scss';
 import './styles/scss/register-form.scss';
+import './styles/scss/modalForEditing.scss';

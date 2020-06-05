@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     <!-- <div class="register">
         <h2 class="register__logo">Todosik</h2>
         <div class="register__content">
@@ -20,7 +20,7 @@
         </div>
     </div> -->
 
-    <div class="register-container" id="register-container">
+    <div class="register-container" style="display: none;" id="register-container">
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Create Account</h1>
@@ -65,11 +65,12 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
-    <h1 class="page-title" style="display: none;">Scrum desk</h1>
-    <div class="container" style="display: none;" id="container">
+    <h1 class="page-title" >Kanban board</h1>
+    <div class="container" id="container">
     <button class="column-add-button">+</button>
+
     <div class="modal-bg">
         <form class="modal">
             <button class="modal__exit"><i class="fas fa-times"></i></button>
