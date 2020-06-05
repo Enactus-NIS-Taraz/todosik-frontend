@@ -2,6 +2,7 @@
 import { showCardsNumber } from './showCardsNumber';
 import { dragAndDrop } from './dragndrop';
 import { editThisCard } from './editCard';
+import { showColumnColor } from './showColumnColor';
 
 function deleteThisCard(someCard, column) {
   someCard.parentNode.removeChild(someCard);
@@ -148,6 +149,8 @@ function addNewCard(column, newColumn) {
     showCardsNumber(newColumn);
 
     dragAndDrop();
+
+    showColumnColor();
   });
 }
 

@@ -1,14 +1,17 @@
+const register = document.querySelector('.register');
+const signIn = document.querySelector('.sign-in');
+const content = document.querySelector('.account-page__content');
+const showSignInLink = document.querySelector('.signin-link');
+const showRegisterLink = document.querySelector('.register-link');
 
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('register-container');
-
-signUpButton.addEventListener('click', () => {
-    container.classList.add("right-panel-active");
-    console.log('bitch');
-    
+showSignInLink.addEventListener('click', () => {
+    register.classList.add('register-hide');
+    signIn.classList.add('sign-in-show');
+    content.classList.add('account-page__content-small')
 });
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+showRegisterLink.addEventListener('click', () => {
+    register.classList.remove('register-hide');
+    signIn.classList.remove('sign-in-show');
+    content.classList.remove('account-page__content-small')
 });

@@ -1,52 +1,116 @@
 
-// .register {
-//     width: 30%;
-//     min-width: 400px;
-//     height: 60vh;
-//     margin: auto;
-//     margin-top: 5%;
-//     text-align: center;
+.account-page {
+    width: 30%;
+    min-width: 400px;
+    height: 60vh;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
 
-//     &__logo {
-//         font-family: 'Sriracha', cursive;
-//         font-size: 60px;
-//         color: rgb(243, 193, 55);
-//     }
+    &__content {
+        margin-top: 30px;
+        width: 100%;
+        height: 430px;
+        padding: 0 30px 30px 30px;
 
-//     &__heading {
-//         color: #333;
-//         margin-top: 10px;
-//         width: 75%;
-//         margin: auto;
-//         margin-bottom: 20px;
-//     }
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
+        -moz-box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
+        box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
+        border-radius: 3px;
+        border: 1px rgb(199, 199, 199) solid;
 
-//     &__content {
-//         margin-top: 30px;
-//         width: 100%;
-//         padding: 30px;
-//         -webkit-box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
-//         -moz-box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
-//         box-shadow: 0px 0px 8px 2px rgba(207,205,207,1);
-//         border-radius: 3px;
-//     }
+        position: relative;
+        overflow: hidden;
+        transition: height 0.6s ease-in-out;
+    }
 
-//     &__form {
-//         width: 100%;
-//     }
+    &__content-small {
+        height: 300px;
+    }
 
-//     &__input {
-//         width: 100%;
-//         height: 40px;
-//         padding: 10px;
-//         border-radius: 5px;
-//         border: 2px solid #ccc;
-//         margin-top: 20px;
-//     }
-// }
+    &__heading {
+        color: rgb(112, 112, 112);
+        margin-top: 10px;
+        width: 75%;
+        margin: auto;
+        padding-top:30px;
+    }
+}
+
+.form {
+    width: 100%;
+
+    &__input {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        margin-top: 20px;
+    }
+
+    &__btn {
+        width: 100px;
+        height: 30px;
+        border: none;
+        background-color: rgb(243, 193, 55);
+        color: white;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+    }
+
+    &__btn:active {
+        transform: scale(0.95);
+    }
+
+    &__link {
+        margin-top: 20px;
+        display: block;
+        font-size: 12px;
+        color: rgb(117, 117, 117);
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+        color: #333;
+    }
+}
+
+.logo {
+    font-family: 'Sriracha', cursive;
+    font-size: 60px;
+    color: rgb(243, 193, 55);
+}
+
+.register {
+    width: 340px;
+    position: absolute;
+    left:30px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.register-hide{
+    transform: translateX(-430px);
+}
+
+.sign-in {
+    width: 340px;
+    position: absolute;
+    left: 430px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.sign-in-show{
+    transform: translateX(-400px);
+}
 
 
-// body {
+// .registration-body {
+//     width: 100%;
 // 	background: #f6f5f7;
 // 	display: flex;
 // 	justify-content: center;
