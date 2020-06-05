@@ -11,7 +11,7 @@ function showTitleEditInput(columnTitle, columnButtons, columnHeader, columnTitl
 
   const editBtn = document.createElement('button');
   editBtn.className = 'edit-btn';
-  editBtn.innerHTML = 'Edit';
+  editBtn.innerHTML = 'Save';
 
   columnHeader.appendChild(editInput);
   columnHeader.appendChild(editBtn);

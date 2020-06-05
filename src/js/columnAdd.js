@@ -3,6 +3,7 @@ import { addNewCard } from './cardAdd';
 import { removeColumn } from './removeColumn';
 import { showTitleEditInput } from './columnTitleEdit';
 import { getRandomColor } from './getRandomColor';
+import { dragAndDrop } from './dragndrop';
 
 // Creating variables
 const createColumnButton = document.querySelector('.column-add-button');
@@ -89,6 +90,8 @@ function addColumn(inputValue) {
   columnTitle.addEventListener('dblclick', () => {
     showTitleEditInput(columnTitle, columnButtons, columnHeader, columnTitleContent);
   });
+
+  dragAndDrop();
 }
 
 function showModal() {
