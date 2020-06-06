@@ -28,6 +28,7 @@ function editThisCard(titleValue, descriptionValue, timeValue, realTimeValue) {
   editModal.appendChild(editModalLabelTitle);
 
   const editModalTitleInput = document.createElement('input');
+  editModalTitleInput.required = true;
   editModalTitleInput.className = 'modal__input';
   editModalTitleInput.value = titleValue.innerText;
 
@@ -40,6 +41,7 @@ function editThisCard(titleValue, descriptionValue, timeValue, realTimeValue) {
   editModal.appendChild(editModalLabelDescription);
 
   const editModalDescriptionInput = document.createElement('input');
+  editModalDescriptionInput.required = true;
   editModalDescriptionInput.className = 'modal__input';
   editModalDescriptionInput.value = descriptionValue.innerText;
 
@@ -52,6 +54,7 @@ function editThisCard(titleValue, descriptionValue, timeValue, realTimeValue) {
   editModal.appendChild(editModalLabelTime);
 
   const editModalTimeInput = document.createElement('input');
+  editModalTimeInput.required = true;
   editModalTimeInput.className = 'modal__input';
   editModalTimeInput.type = 'number';
   editModalTimeInput.value = timeValue.innerText;
