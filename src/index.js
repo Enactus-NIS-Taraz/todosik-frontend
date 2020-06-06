@@ -14,3 +14,9 @@ import './styles/scss/column.scss';
 import './styles/scss/card.scss';
 import './styles/scss/register-form.scss';
 import './styles/scss/modalForEditing.scss';
+
+// import img from '../double-bubble-dark.png';
+
+// const body = document.getElementById('body');
+
+// body.backgroundImage.style.backgroundImage = 'url('img')';
