@@ -13,6 +13,10 @@ function editThisCard(titleValue, descriptionValue, timeValue, realTimeValue) {
   editModalExit.className = 'modal__exit';
   editModalExit.innerHTML = '<i class="fas fa-times"></i>';
 
+  editModalExit.addEventListener('click', () => {
+    modalBg.parentNode.removeChild(modalBg);
+  });
+
   editModal.appendChild(editModalExit);
 
   const editModalHeader = document.createElement('h2');
