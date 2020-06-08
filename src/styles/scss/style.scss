@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+}
+
 button:focus {
     outline: none;
 }
