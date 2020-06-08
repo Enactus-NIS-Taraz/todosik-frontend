@@ -1,0 +1,36 @@
+.boards {
+    padding: 70px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        height: 180px;
+        width: 152px;
+        margin: 20px;
+        border-radius: 5px;
+        border: 1px rgb(231, 231, 231) solid;
+    }
+
+    &__header {
+        font-size: 20px;
+        margin-left: 70px;
+        color: rgb(4, 5, 56);
+    }
+
+    &__img {
+        height: 120px;
+        width: 120px;
+        background-image: url(../../../user-pic.jpg);
+        background-size:  cover;
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    &__title {
+        text-align: center;
+        font-size: 13px;
+        color: rgb(31, 31, 31);
+        margin-top: 20px;
+    }
+}

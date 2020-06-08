@@ -20,6 +20,7 @@ import './styles/scss/modalForEditing.scss';
 import './styles/scss/columnDragnDrop.scss';
 import './styles/scss/dropDown.scss';
 import './styles/scss/side-bar.scss';
+import './styles/scss/boards.scss';
 
 // import img from '../double-bubble-dark.png';
 
