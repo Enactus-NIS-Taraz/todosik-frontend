@@ -21,7 +21,7 @@
         justify-content: space-between;
         width: 90%;
         margin: auto;
-        padding: 15px;
+        padding: 25px 15px;
     }
 
     &__btn {
@@ -39,14 +39,22 @@
     }
 
     &__item {
-        padding: 6px 15px;
+        padding: 8px 25px;
         font-size: 14px;
         cursor: pointer;
         color: rgb(202, 202, 202);
     }
 
+    &__item i{
+        margin-right: 5px;
+    }
+
     &__item:hover {
         background-color: #323c46;
+    }
+
+    &__icon {
+        margin-right: 7px;
     }
 }
 
