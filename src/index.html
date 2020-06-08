@@ -10,7 +10,7 @@
 
     <!-- Sign in and out page -->
 
-    <div class="account-page"  style="display: none;">
+    <div class="account-page" style="display: none;">
         <h2 class="logo">Todosik</h2>
         <div class="account-page__content">
             <div class="register">
@@ -37,11 +37,32 @@
         </div>
     </div> 
 
+    <!-- Home page -->
+
+    <div class="home-body">
+        <aside class="side-bar">
+            <header class="side-bar__header">
+                <span>Todosik</span>
+                <button class="side-bar__btn side-bar__btn_inside">
+                    <i class="fas fa-times"></i>
+                </button>
+            </header>
+            <ul>
+                <li class="side-bar__item">Home</li>
+                <li class="side-bar__item">My tasks</li>
+                <li class="side-bar__item">Inbox</li>
+            </ul>
+        </aside>
+        <button class="side-bar__btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
     <!-- KanBan board -->
 
-    <h1 class="page-title">Kanban board</h1>
+    <h1 class="page-title" style="display: none;">Kanban board</h1>
 
-    <div class="container" id="container">
+    <div class="container" style="display: none;" id="container">
     <button class="column-add-button">+</button>
 
     <div class="modal-bg">

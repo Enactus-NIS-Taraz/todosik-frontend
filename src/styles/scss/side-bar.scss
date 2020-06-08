@@ -1,0 +1,55 @@
+.home-body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.side-bar {
+    position: absolute;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #24292e;
+    color: rgb(202, 202, 202);
+    transition: left 0.5s linear;
+
+    &__header {
+        font-family: 'Sriracha', cursive;
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+        color: rgb(44, 44, 44);
+        font-size: 18px;
+        font-weight: 300;
+        padding: 20px;
+    }
+
+    &__btn_inside {
+        color: rgb(221, 221, 221);
+        padding: 0;
+    }
+
+    &__item {
+        padding: 6px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        color: rgb(202, 202, 202);
+    }
+
+    &__item:hover {
+        background-color: #323c46;
+    }
+}
+
+.side-bar-active {
+    left: 0;
+}
