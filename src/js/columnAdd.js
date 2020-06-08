@@ -15,10 +15,11 @@ const container = document.getElementById('container');
 
 function addColumn(inputValue) {
   const newColumn = document.createElement('div');
-  newColumn.className = 'column';
+  newColumn.className = 'column draggable';
 
   const columnHeader = document.createElement('div');
   columnHeader.className = 'column__header';
+  columnHeader.setAttribute('draggable', true);
 
   newColumn.appendChild(columnHeader);
 
@@ -75,6 +76,8 @@ function addColumn(inputValue) {
   deleteColumnButton.addEventListener('click', () => {
     removeColumn(newColumn);
   });
+
+  newColumn.setAttribute('draggable', true);
 
   const trashIcon = document.createElement('i');
   trashIcon.className = 'fas fa-trash-alt';

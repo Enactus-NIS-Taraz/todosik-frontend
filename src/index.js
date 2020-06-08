@@ -10,10 +10,12 @@ import './styles/scss/edit_column_title.scss';
 import './js/columnAdd';
 import './js/getRandomColor';
 import './js/registerForm';
+import './js/columnDragAndDrop';
 import './styles/scss/column.scss';
 import './styles/scss/card.scss';
 import './styles/scss/register-form.scss';
 import './styles/scss/modalForEditing.scss';
+import './styles/scss/columnDragnDrop.scss';
 
 // import img from '../double-bubble-dark.png';
 
