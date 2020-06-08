@@ -4,6 +4,7 @@ import { removeColumn } from './removeColumn';
 import { showTitleEditInput } from './columnTitleEdit';
 import { getRandomColor } from './getRandomColor';
 import { dragAndDrop } from './dragndrop';
+import { columnDragNDrop } from './columnDragAndDrop';
 
 // Creating variables
 const createColumnButton = document.querySelector('.column-add-button');
@@ -95,6 +96,8 @@ function addColumn(inputValue) {
   });
 
   dragAndDrop();
+
+  columnDragNDrop();
 }
 
 function showModal() {
