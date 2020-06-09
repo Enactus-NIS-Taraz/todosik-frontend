@@ -11,6 +11,7 @@ import './js/columnAdd';
 import './js/getRandomColor';
 import './js/registerForm';
 import './js/side-bar';
+import './js/main-page';
 import './js/userPicDropdown';
 import './js/columnDragAndDrop';
 import './styles/scss/column.scss';
