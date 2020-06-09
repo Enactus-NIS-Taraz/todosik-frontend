@@ -26,6 +26,11 @@
     flex-direction: column;
     overflow: hidden;
 
+    &_settings {
+        width: 60%;
+        height: 70%;
+    }
+
     &__header {
         width: 100%;
         text-align: left;

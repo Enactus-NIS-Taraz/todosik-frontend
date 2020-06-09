@@ -11,6 +11,7 @@ import './js/columnAdd';
 import './js/getRandomColor';
 import './js/registerForm';
 import './js/side-bar';
+import './js/editProfileSettings';
 import './js/main-page';
 import './js/userPicDropdown';
 import './js/columnDragAndDrop';
@@ -20,6 +21,7 @@ import './styles/scss/register-form.scss';
 import './styles/scss/modalForEditing.scss';
 import './styles/scss/columnDragnDrop.scss';
 import './styles/scss/dropDown.scss';
+import './styles/scss/profileSettings.scss';
 import './styles/scss/side-bar.scss';
 import './styles/scss/boards.scss';
 
