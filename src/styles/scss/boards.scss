@@ -9,6 +9,12 @@
         margin: 20px;
         border-radius: 5px;
         border: 1px rgb(231, 231, 231) solid;
+        transition: transform 0.3s linear;
+        cursor: pointer;
+    }
+
+    &__item:hover {
+        transform: translateY(-20px);
     }
 
     &__header {
