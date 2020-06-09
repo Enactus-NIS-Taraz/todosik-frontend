@@ -4,5 +4,5 @@ const dropdown = document.querySelector('.dropdown');
 
 settingsButton.addEventListener('click', () => {
     modalBg.style.display = 'flex';
-    dropdown.style.display = 'none';
+    dropdown.classList.remove('dropdown-active');
 })
