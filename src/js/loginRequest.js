@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', (event) => {
     // Handle success.
     console.log(token);
     console.log(res);
-    
+
     homePage.style.display = 'flex';
     accountPage.style.display = 'none';
   }).catch((err) => {
