@@ -3,6 +3,7 @@ const sideBar = document.querySelector('.side-bar');
 
 sideBarBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
+        
         sideBar.classList.toggle('side-bar-active');
         console.log('bitch');
         
