@@ -25,6 +25,7 @@ import './styles/scss/profileSettings.scss';
 import './styles/scss/side-bar.scss';
 import './styles/scss/boards.scss';
 import './js/registerRequest';
+import './js/loginRequest';
 
 // import img from '../double-bubble-dark.png';
 
