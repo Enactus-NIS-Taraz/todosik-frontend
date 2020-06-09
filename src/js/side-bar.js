@@ -1,12 +1,12 @@
-const sideBarBtns = document.querySelectorAll('.side-bar__btn');
-const sideBar = document.querySelector('.side-bar');
+const sidebarBtns = document.querySelectorAll('.side-bar__btn');
+const sidebar = document.querySelector('.side-bar');
+const sidebarBtnOutside = document.querySelector('.side-bar__btn_out');
 
-sideBarBtns.forEach((btn) => {
+sidebarBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        
-        sideBar.classList.toggle('side-bar-active');
+        sidebarBtnOutside.classList.toggle('unvisible')
+        sidebar.classList.toggle('side-bar-active');
         console.log('bitch');
-        
     }
     )
 });
